@@ -1,0 +1,6 @@
+status: true
+dependencies: {  }
+id: teaser
+label: Teaser
+locked: false
+pattern: 'j F Y'

@@ -1,0 +1,12 @@
+status: true
+dependencies: {  }
+name: sponsor_gold
+label: 'Sponsor (gold)'
+effects:
+  a548ed9a-1713-4ce1-814c-773ea875aaf9:
+    uuid: a548ed9a-1713-4ce1-814c-773ea875aaf9
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 580
+      height: 325

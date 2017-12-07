@@ -1,0 +1,17 @@
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_case_organisation
+    - node.type.case
+id: node.case.field_case_organisation
+field_name: field_case_organisation
+entity_type: node
+bundle: case
+label: 'Name organisation'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

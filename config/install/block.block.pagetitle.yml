@@ -1,0 +1,23 @@
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - splashawards_base
+id: pagetitle
+theme: splashawards_base
+region: content
+weight: -4
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/voting\r\n/voting/*\r\n/user\r\n/user/*"
+    negate: false
+    context_mapping: {  }

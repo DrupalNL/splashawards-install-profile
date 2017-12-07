@@ -1,0 +1,7 @@
+status: true
+dependencies: {  }
+name: 'Case Categories'
+vid: case_categories
+description: ''
+hierarchy: 0
+weight: 0

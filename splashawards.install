@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Splash Awards install profile.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function splashawards_install() {
+  // First, do everything in standard profile.
+  include_once DRUPAL_ROOT . '/core/profiles/standard/standard.install';
+  standard_install();
+
+  // Set Splash Awards Base Theme as the default theme.
+  \Drupal::configFactory()->getEditable('system.theme')->set('default', 'splashawards_base')->save(TRUE);
+
+  // Create default terms.
+  $term = \Drupal\taxonomy\Entity\Term::create([
+    'vid' => 'sponsor_levels',
+    'name' => 'Gold',
+    'weight' => 0,
+  ]);
+  $term->save();
+  $term = \Drupal\taxonomy\Entity\Term::create([
+    'vid' => 'sponsor_levels',
+    'name' => 'Silver',
+    'weight' => 5,
+  ]);
+  $term->save();
+  $term = \Drupal\taxonomy\Entity\Term::create([
+    'vid' => 'sponsor_levels',
+    'name' => 'Bronze',
+    'weight' => 10,
+  ]);
+  $term->save();
+
+  // Create frontpage.
+  $node = \Drupal\node\Entity\Node::create([
+    'title' => 'Splash Awards',
+    'type' => 'page',
+  ]);
+  $node->save();
+  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/node/' . $node->id())->save(TRUE);
+}

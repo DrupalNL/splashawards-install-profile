@@ -1,0 +1,95 @@
+/**
+ * Generic page element styles.
+ */
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 10px 0;
+}
+
+ol, ul {
+  padding-left: 1.5em;
+  .popover &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.page-wrapper {
+  background-color: $page-wrapper-bg;
+  max-width: $page-wrapper-max-width;
+  margin: 0 auto;
+}
+
+.main-container.container {
+  margin-bottom: 40px;
+}
+
+// Page header.
+.page-header {
+  margin-top: 0;
+}
+
+secion.block-webform {
+  margin-bottom: 100px;
+}
+
+// Footer.
+.footer {
+  margin-top: 45px;
+  padding-top: 35px;
+  padding-bottom: 36px;
+  border-top: 1px solid #E5E5E5;
+}
+
+// Paragraphs.
+p:last-child,
+.form-group:last-child,
+.panel:last-child {
+  margin-bottom: 0;
+}
+
+// Help region.
+.region-help {
+  > .glyphicon {
+    font-size: $font-size-large;
+    float: left;
+    margin: -0.05em 0.5em 0 0;
+  }
+  .block {
+    overflow: hidden;
+  }
+}
+
+
+.help-block, .control-group .help-inline {
+  color: $gray-light;
+  font-size: 12px;
+  margin: 5px 0 10px;
+  padding: 0;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.panel-default {
+  border: 0;
+  > .panel-heading {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    >  .panel-title {
+      font-family: $font-family-serif;
+      font-weight: bold;
+      font-size: $font-size-h2;
+    }
+  }
+  > .panel-body {
+    padding: 0 0 40px 0;
+    > .form-wrapper {
+      margin: 40px 0;
+    }
+    .form-tel.form-control {
+      display: block;
+      width: 100%;
+    }
+  }
+}

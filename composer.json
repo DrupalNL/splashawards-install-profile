@@ -1,0 +1,56 @@
+{
+    "name": "drupalnl/splashawards-install-profile",
+    "description": "Drupal 8 install profile for Splash Awards websites.",
+    "type": "drupal-profile",
+    "license": "GPL-2.0+",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.2",
+        "drupal-composer/drupal-scaffold": "^2.2",
+        "cweagans/composer-patches": "^1.6",
+        "drupal/core": "~8.4.2",
+        "drupal/admin_toolbar": "1.21.0",
+        "drupal/ctools": "3.0.0",
+        "drupal/ds": "3.1.0",
+        "drupal/entity_reference_revisions": "1.3.0",
+        "drupal/field_group": "3.0.0-beta1",
+        "drupal/markup": "1.0.0-beta1",
+        "drupal/override_node_options": "2.3.0",
+        "drupal/paragraphs": "1.2.0",
+        "drupal/pathauto": "1.0.0",
+        "drupal/social_media_links": "2.6.0",
+        "drupal/token": "1.0.0",
+        "drupal/video_embed_field": "1.5.0",
+        "drupal/view_unpublished": "1.0.0-alpha1",
+        "drupal/viewsreference": "2.0.0-alpha3",
+        "drupal/webform": "5.0.0-beta24",
+        "drupal/bootstrap": "3.6.0"
+    },
+    "require-dev": {
+        "drupal/console": "~1.0",
+        "drush/drush": "^8.0"
+    },
+    "scripts": {
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+    },
+    "extra": {
+        "installer-paths": {
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/profiles/lightning/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/lightning/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ]
+        }
+    }
+}

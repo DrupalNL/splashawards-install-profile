@@ -1,0 +1,5 @@
+status: true
+dependencies: {  }
+id: view
+label: View
+behavior_plugins: {  }
