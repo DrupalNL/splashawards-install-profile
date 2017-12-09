@@ -1,14 +1,14 @@
 status: true
 dependencies:
   config:
-    - field.storage.node.field_case_introduction
+    - field.storage.node.field_case_summary
     - node.type.case
-id: node.case.field_case_introduction
-field_name: field_case_introduction
+id: node.case.field_case_summary
+field_name: field_case_summary
 entity_type: node
 bundle: case
-label: 'Short introduction'
-description: ''
+label: Summary
+description: 'Describe the case in max. 400 characters.'
 required: true
 translatable: false
 default_value: {  }

@@ -7,9 +7,9 @@ id: node.case.field_case_challenges
 field_name: field_case_challenges
 entity_type: node
 bundle: case
-label: 'Technical challenges'
-description: 'What technical challenges were there for the project and how were they overcome?'
-required: false
+label: Challenges
+description: 'What were the main (technical) challenges in the project and how were they overcome?'
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

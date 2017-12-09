@@ -2,8 +2,8 @@ status: true
 dependencies:
   module:
     - node
-id: node.field_case_introduction
-field_name: field_case_introduction
+id: node.field_case_summary
+field_name: field_case_summary
 entity_type: node
 type: string_long
 settings:

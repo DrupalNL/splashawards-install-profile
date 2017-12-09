@@ -1,0 +1,7 @@
+status: true
+dependencies: {  }
+id: form
+label: Form
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

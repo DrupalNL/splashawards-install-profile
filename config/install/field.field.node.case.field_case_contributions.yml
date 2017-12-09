@@ -7,9 +7,9 @@ id: node.case.field_case_contributions
 field_name: field_case_contributions
 entity_type: node
 bundle: case
-label: 'Contribution form the project to the Drupal-community'
-description: 'For example: modules, patches, translations, documentation.'
-required: false
+label: 'Community contributions'
+description: 'How did the project contribute back to the Drupal community, eg. modules, patches, translations, documentation, sprints etc.?'
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

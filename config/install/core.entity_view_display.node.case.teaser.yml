@@ -2,7 +2,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.case.field_case_background
     - field.field.node.case.field_case_category
     - field.field.node.case.field_case_challenges
     - field.field.node.case.field_case_contact_email
@@ -11,19 +10,17 @@ dependencies:
     - field.field.node.case.field_case_contributions
     - field.field.node.case.field_case_customer
     - field.field.node.case.field_case_customer_logo
-    - field.field.node.case.field_case_goals
-    - field.field.node.case.field_case_introduction
+    - field.field.node.case.field_case_description
     - field.field.node.case.field_case_invoice_email
     - field.field.node.case.field_case_launch_date
     - field.field.node.case.field_case_logo
-    - field.field.node.case.field_case_modules
     - field.field.node.case.field_case_organisation
-    - field.field.node.case.field_case_quote
-    - field.field.node.case.field_case_results
     - field.field.node.case.field_case_screenshots
+    - field.field.node.case.field_case_summary
     - field.field.node.case.field_case_terms_agreed
     - field.field.node.case.field_case_url
     - field.field.node.case.field_case_video
+    - field.field.node.case.field_intro
     - node.type.case
   module:
     - user
@@ -36,7 +33,6 @@ content:
     weight: 100
     region: content
 hidden:
-  field_case_background: true
   field_case_category: true
   field_case_challenges: true
   field_case_contact_email: true
@@ -45,16 +41,13 @@ hidden:
   field_case_contributions: true
   field_case_customer: true
   field_case_customer_logo: true
-  field_case_goals: true
-  field_case_introduction: true
+  field_case_description: true
   field_case_invoice_email: true
   field_case_launch_date: true
   field_case_logo: true
-  field_case_modules: true
   field_case_organisation: true
-  field_case_quote: true
-  field_case_results: true
   field_case_screenshots: true
+  field_case_summary: true
   field_case_terms_agreed: true
   field_case_url: true
   field_case_video: true

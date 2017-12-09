@@ -1,7 +1,6 @@
 status: true
 dependencies:
   config:
-    - field.field.node.case.field_case_background
     - field.field.node.case.field_case_category
     - field.field.node.case.field_case_challenges
     - field.field.node.case.field_case_contact_email
@@ -10,16 +9,13 @@ dependencies:
     - field.field.node.case.field_case_contributions
     - field.field.node.case.field_case_customer
     - field.field.node.case.field_case_customer_logo
-    - field.field.node.case.field_case_goals
-    - field.field.node.case.field_case_introduction
+    - field.field.node.case.field_case_description
     - field.field.node.case.field_case_invoice_email
     - field.field.node.case.field_case_launch_date
     - field.field.node.case.field_case_logo
-    - field.field.node.case.field_case_modules
     - field.field.node.case.field_case_organisation
-    - field.field.node.case.field_case_quote
-    - field.field.node.case.field_case_results
     - field.field.node.case.field_case_screenshots
+    - field.field.node.case.field_case_summary
     - field.field.node.case.field_case_terms_agreed
     - field.field.node.case.field_case_url
     - field.field.node.case.field_case_video
@@ -44,8 +40,9 @@ third_party_settings:
         - field_case_contact_email
         - field_case_contact_phone
         - field_case_invoice_email
+        - field_case_terms_agreed
       parent_name: ''
-      weight: 1
+      weight: 2
       format_type: fieldset
       format_settings:
         label: 'About who is submitting the case'
@@ -54,26 +51,23 @@ third_party_settings:
         classes: ''
         required_fields: false
       label: 'About who is submitting the case'
+      region: content
     group_over_de_case:
       children:
-        - title
         - field_case_category
-        - field_case_url
-        - field_case_introduction
+        - title
         - field_case_launch_date
-        - field_case_background
-        - field_case_goals
-        - field_case_results
+        - field_case_summary
+        - field_case_description
         - field_case_challenges
-        - field_case_modules
         - field_case_contributions
-        - field_case_quote
+        - field_case_url
         - field_case_customer
         - field_case_customer_logo
         - field_case_screenshots
         - field_case_video
       parent_name: ''
-      weight: 2
+      weight: 1
       format_type: fieldset
       format_settings:
         label: 'About the case'
@@ -82,81 +76,19 @@ third_party_settings:
         classes: ''
         required_fields: false
       label: 'About the case'
+      region: content
 id: node.case.default
 targetEntityType: node
 bundle: case
 mode: default
 content:
-  field_case_background:
-    weight: 15
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_case_category:
     weight: 11
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
+    type: options_select
     region: content
   field_case_challenges:
-    weight: 18
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
-  field_case_contact_email:
-    weight: 13
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: email_default
-    region: content
-  field_case_contact_name:
-    weight: 12
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_case_contact_phone:
-    weight: 14
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-    type: telephone_default
-    region: content
-  field_case_contributions:
-    weight: 20
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
-  field_case_customer:
-    weight: 22
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_case_customer_logo:
-    weight: 23
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  field_case_goals:
     weight: 16
     settings:
       rows: 5
@@ -164,61 +96,30 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
-  field_case_introduction:
-    weight: 13
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
-  field_case_invoice_email:
-    weight: 15
+  field_case_contact_email:
+    weight: 29
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: email_default
     region: content
-  field_case_launch_date:
-    weight: 14
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_case_logo:
-    weight: 11
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  field_case_modules:
-    weight: 19
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
-  field_case_organisation:
-    weight: 10
+  field_case_contact_name:
+    weight: 28
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_case_quote:
-    weight: 21
+  field_case_contact_phone:
+    weight: 30
     settings:
-      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
+    type: telephone_default
     region: content
-  field_case_results:
+  field_case_contributions:
     weight: 17
     settings:
       rows: 5
@@ -226,23 +127,90 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
-  field_case_screenshots:
-    weight: 24
+  field_case_customer:
+    weight: 19
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_case_customer_logo:
+    weight: 20
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
     region: content
+  field_case_description:
+    weight: 15
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_case_invoice_email:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_case_launch_date:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_case_logo:
+    weight: 27
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_case_organisation:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_case_screenshots:
+    weight: 21
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_case_summary:
+    weight: 14
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      maxlength:
+        maxlength_js: 400
+        maxlength_js_label: 'Remaining characters: <strong>@remaining</strong>'
+        maxlength_js_enforce: true
+        maxlength_js_truncate_html: true
+    type: string_textarea
+    region: content
   field_case_terms_agreed:
-    weight: 3
+    weight: 32
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_case_url:
-    weight: 12
+    weight: 18
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -250,7 +218,7 @@ content:
     type: link_default
     region: content
   field_case_video:
-    weight: 25
+    weight: 22
     settings: {  }
     third_party_settings: {  }
     type: video_embed_field_textfield
@@ -261,9 +229,16 @@ content:
     third_party_settings: {  }
     type: markup
     region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 33
+    third_party_settings: {  }
+    region: content
   title:
     type: string_textfield
-    weight: 10
+    weight: 12
     settings:
       size: 60
       placeholder: ''

@@ -1,14 +1,15 @@
 status: true
 dependencies:
   module:
-    - node
-id: node.field_case_quote
-field_name: field_case_quote
-entity_type: node
-type: string_long
+    - paragraphs
+    - webform
+id: paragraph.field_form
+field_name: field_form
+entity_type: paragraph
+type: webform
 settings:
-  case_sensitive: false
-module: core
+  target_type: webform
+module: webform
 locked: false
 cardinality: 1
 translatable: true
