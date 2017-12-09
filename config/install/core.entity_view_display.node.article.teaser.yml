@@ -18,8 +18,7 @@ third_party_settings:
   ds:
     layout:
       id: ds_reset
-      path: modules/contrib/ds
-      library: ''
+      library: null
       disable_css: false
       entity_classes: no_classes
       settings:
@@ -104,16 +103,16 @@ third_party_settings:
         effect: none
         speed: fast
       label: Wrapper
+      region: hidden
 id: node.article.teaser
 targetEntityType: node
 bundle: article
 mode: teaser
 content:
   body:
-    type: text_summary_or_trimmed
+    type: text_default
     weight: 4
-    settings:
-      trim_length: 240
+    settings: {  }
     third_party_settings:
       ds:
         ft:
@@ -121,7 +120,7 @@ content:
           settings:
             lb: ''
     label: hidden
-    region: content
+    region: ds_content
   field_image:
     type: image
     weight: 0
@@ -135,7 +134,7 @@ content:
           settings:
             lb: ''
     label: hidden
-    region: content
+    region: ds_content
 hidden:
   field_contents: true
   field_tags: true
